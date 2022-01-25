@@ -5,30 +5,28 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class getInputFromTextString {
+
     Scanner sc = new Scanner(System.in);
     convertToBinary c = new convertToBinary();
-    int counter = 0;
-
-    ArrayList<String> arrayList = new ArrayList<String>();
+    ArrayList<String> arrayList = new ArrayList<>();
 
     public void getInput() {
         System.out.println("Enter file name: ");
         String fileName = sc.next();
+        int counter = 0;
 
         try {
             BufferedReader read = new BufferedReader(new FileReader(fileName));
             String line;
-
             while ((line = read.readLine()) != null) {
                 arrayList.add(line);
                 counter++;
-
             }
             read.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        c.toASCII(arrayList,counter,fileName);
+        c.toASCII(arrayList, counter);
     }
 }
 

@@ -7,10 +7,10 @@ public class mainClass {
 
     public static void main(String[] args){
         mainClass m = new mainClass();
-        m.goTo();
+        m.menu();
     }
-    public void goTo(){
-        System.out.println("What would you like to do?? \n1). Convert Text to binary \n2). Convert binary to Text \nD:\\Sample\\sample.txt");
+    public void menu(){
+        System.out.println("What would you like to do?? \n1). Convert Text to binary \n2). Convert binary to Text \nD:\\Sample\\sample.txt\nD:\\Sample\\sampleBinary.txt");
         Scanner scan = new Scanner(System.in);
         int choose = scan.nextInt();
         if (choose == 1){
