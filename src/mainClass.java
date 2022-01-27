@@ -1,7 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class mainClass {
@@ -10,8 +6,8 @@ public class mainClass {
     convertToBinary cb = new convertToBinary();
     Scanner scan = new Scanner(System.in);
     writeToFile wr = new writeToFile();
-
-
+    splitElements se = new splitElements();
+    convertToText ct = new convertToText();
 
     public static void main(String[] args){
        mainClass mc = new mainClass();
@@ -22,19 +18,17 @@ public class mainClass {
 
         int choose = scan.nextInt();
 
+        System.out.println("Enter file name: ");
+        String fromFileName = scan.next();
+
+        System.out.println("Enter the file you would like to see output: ");
+        String toFile = scan.next();
+
         if (choose == 1){
-            System.out.println("Enter file name: ");
-            String fromFileName = scan.next();
-
-
-            System.out.println("Enter the file you would like to see output: ");
-            String toFile = scan.next();
-
-            System.out.println(wr.write(cb.toASCII(g.getInput(fromFileName)),toFile));
-
+            System.out.println(wr.write(cb.charToASCII(se.splitArrayForConvertingToBinary(g.getInput(fromFileName))),toFile,fromFileName,false));
 
         } else {
-            // binary to text
+            System.out.println(wr.write(ct.binaryToASCII(se.splitArrayForConvertingToText(g.getInput(fromFileName))),toFile,fromFileName,true));
         }
     }
 }

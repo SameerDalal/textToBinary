@@ -8,33 +8,27 @@ import java.util.ArrayList;
 public class readFromFile {
 
     ArrayList<String> arrayList = new ArrayList<>();
-    int lineCounter = 0;
-
-
-    public String fileName1;
 
 
     public ArrayList getInput(String fileName1) {
-        this.fileName1 = fileName1;
         try {
+            try {
                 BufferedReader read = new BufferedReader(new FileReader(fileName1));
                 String line;
                 while ((line = read.readLine()) != null) {
                     arrayList.add(line);
-                    lineCounter++;
-                    read.lines();
-                    }
+                }
                 read.close();
-            } catch (IOException e) {
+            } catch (FileNotFoundException fnf) {
+                for (int x = 0; x <arrayList.size(); x++){
+                    arrayList.add(x,"");
+                    // if there is an exception then the arrayList is cleared
+                }
+            }
+        } catch (IOException e) {
             e.printStackTrace();
-
         }
         return arrayList;
-    }
-    public String NameOfFile(){
-        return this.fileName1;
-
-
     }
 }
 
