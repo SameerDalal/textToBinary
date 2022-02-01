@@ -5,4 +5,4 @@ It can also take your binary .txt file and convert it to text and put it into a 
 <img src="images/convert_to_Binary_1.PNG" width ="600" height="215" >
 <img src="images/convert_to_Binary_2.PNG" width ="600" height="215" >
 <img src="images/convert_to_Binary_3.PNG" width ="550" height="625" >
-<img src="images/convert_to_Binary_4.PNG" width ="550" height="625" >
+<img src="images/convert_to_Binary_4.PNG">
