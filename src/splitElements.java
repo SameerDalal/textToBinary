@@ -7,7 +7,6 @@ public class splitElements {
     public ArrayList splitArrayForConvertingToBinary(ArrayList<String> arrayToSplit){
 
         for (int a = 0; a < arrayToSplit.size(); a++){
-
             String[] characters = arrayToSplit.get(a).split("");
             for (String element : characters) {
                 splitList.add(element);
@@ -18,7 +17,6 @@ public class splitElements {
 
     public ArrayList splitArrayForConvertingToText(ArrayList<String> arrayToSplit){
         for (int a = 0; a < arrayToSplit.size(); a++){
-
             String[] characters = arrayToSplit.get(a).split(" ");
             for (String element : characters) {
                 splitList.add(element);
@@ -26,5 +24,4 @@ public class splitElements {
         }
         return splitList;
     }
-
 }
